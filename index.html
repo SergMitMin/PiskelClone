@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Piskel Clone</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <header>
+    <h2>Piskel Clone App</h2>
+  </header>
+  <div class="wrapper">
+    <div id="toolbar">
+      <button id="pen">pen(q)</button>
+
+      <button id="line">line(e)</button>
+      <button id="fill-rectangle">Fill rectangle(r)</button>
+      <button id="stroke-rectangle">Stroke rectangle(t)</button>
+      <button id="fill-circle">Fill circle(y)</button>
+      <button id="stroke-circle">Stroke circle(u)</button>
+      <button id="eraser">eraser(z)</button>
+      <div>
+        <label for="main-color">Main Color</label>
+        <input type="color" name="main-color" id="cursorColor">
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for="secondary">Secondary</label>
+        <input type="color" name="secandary" id="secondaryColor">
+      </div>
+    </div>
+    <div id="main">
+      <canvas id="canvas" width="128" height="128">
+        Browser is not supported
+      </canvas>
+      <div class="canvas-controls">
+        <button id="btn32">32x32</button>
+        <button id="btn64">64x64</button>
+        <button id="btn128">128x128</button>
+        <button type="submit" id="createFrameBtn">Create frame</button>
+
+      </div>
+    </div>
+    <div class="div">
+      <div id="animation">
+        css animation will be shown here
+      </div>
+      <div class="fps-controller">
+        <p>0 FPS</p>
+        <input type="range" name="fps" id="fps-btn" min="1" max="24" value="12" step="1">
+        <p>24 FPS</p>
+      </div>
+      <div id="canvas-coordinates"></div>
+      <div class="demo">
+        <div class="images">
+          <img src="" alt="" class="render">
+        </div>
+      </div>
+    </div>
+
+    <div id="frames">
+      frames
+    </div>
+  </div>
+  <script type="text/javascript" src="app.bundle.js"></script>
+</body>
+
+</html>
