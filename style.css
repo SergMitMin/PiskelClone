@@ -54,13 +54,14 @@ button:hover {
   /* background-color: rgba(34, 32, 34, 0.733); */
 }
 #animation img{
-
   height: 200px;
   width: 200px;
 }
 #frames{
   display: flex;
   flex-direction: column;
+  overflow: scroll;
+  height: 700px;
 }
 .fps-controller{
   display: flex;

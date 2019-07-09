@@ -8,10 +8,15 @@
 </head>
 
 <body>
+  <!-- header starts -->
   <header>
     <h2>Piskel Clone App</h2>
   </header>
+  <!-- header ends -->
+
+  <!-- wrapper starts -->
   <div class="wrapper">
+    <!-- toolbar -->
     <div id="toolbar">
       <button id="pen">pen(q)</button>
 
@@ -32,6 +37,7 @@
         <input type="color" name="secandary" id="secondaryColor">
       </div>
     </div>
+    <!-- toolbar ends -->
     <div id="main">
       <canvas id="canvas" width="128" height="128">
         Browser is not supported
@@ -44,6 +50,7 @@
 
       </div>
     </div>
+    <!-- main ends -->
     <div class="div">
       <div id="animation">
         css animation will be shown here
@@ -55,17 +62,20 @@
       </div>
       <div id="canvas-coordinates"></div>
       <div class="demo">
-        <div class="images">
-          <img src="" alt="" class="render">
-        </div>
+        <img src="" id="anima">
       </div>
+      <button class="create-gif">Create GIF</button>
+      <button class="download-gif">Download GIF</button>
     </div>
-
     <div id="frames">
       frames
     </div>
   </div>
-  <script type="text/javascript" src="dist/app.bundle.js"></script>
+  <!-- wrapper ends -->
+
+  </div>
+  <!-- <script type="text/javascript" src="dist/app.bundle.js"></script> -->
+  <script type="text/javascript" src="app.bundle.js"></script>
 </body>
 
 </html>
