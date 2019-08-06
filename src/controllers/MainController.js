@@ -451,11 +451,11 @@ export default class MainController {
     // eslint - disable - next - line vars - on - top
     // eslint - disable - next - line no -var
     const animationTarget = document.getElementById('anima');
-    let gifForDown = animationTarget.attributes[0].nodeValue;
     const frames = this.mainModel.getFrames();
     var gif = new GIF({
       workers: 2,
       quality: 5,
+      delay: 1,
     });
 
     frames.forEach(e => {
@@ -463,12 +463,10 @@ export default class MainController {
     })
     gif.on('finished', function (blob) {
       let blob1 = URL.createObjectURL(blob);
-      // animationTarget.src = URL.createObjectURL(blob);
-      // download(`data:image/gif;base64, ${animationTarget}`, "dlDataUrlBin.gif", "image/gif");
       var x = new XMLHttpRequest();
       x.open("GET", `${blob1}`, true);
       x.responseType = 'blob';
-      x.onload = function (e) { download(x.response, "dlBinAjax.gif", "image/gif"); }
+      x.onload = function (e) { download(x.response, "awesomeGif.gif", "image/gif"); }
       x.send();
     });
     gif.render();
